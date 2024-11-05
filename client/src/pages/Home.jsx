@@ -8,6 +8,7 @@ import HomeSlide from '../components/Home/HomeSlide';
 import StoryDescription from '../components/Home/StoryDescription';
 import ExpansionInfo from '../components/Home/ExpansionInfo';
 import StorySlide from '../components/Home/StorySlide';
+import PurchaseBook from '../components/Home/PurchaseBook';
 
 const Home = () => {
   return (
@@ -32,7 +33,7 @@ const Home = () => {
         <Container header="Hollow Knight Expands with 4 Giant Free Content Packs">
           <ExpansionInfo />
         </Container>
-
+        <PurchaseBook />
         <StorySlide />
 
         {/* <Container header="top rated movies">

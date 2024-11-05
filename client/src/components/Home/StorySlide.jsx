@@ -22,7 +22,7 @@ const StorySlide = () => {
     <Box sx={{
       position: "relative",
       color: "primary.contrastText",
-      marginTop: "20px"
+      marginTop: "50px"
     }}>
       <Swiper
         grabCursor={true}
