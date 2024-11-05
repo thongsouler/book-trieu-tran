@@ -89,11 +89,11 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                 alignItems: "center",
                 paddingX: "30px",
                 color: "text.primary",
-                width: { sm: "unset", md: "30%", lg: "40%" },
-                float: "right"
+                width: { sm: "unset", md: "30%", lg: "40%" }
               }}>
                 <Stack spacing={4} direction="column">
-                  {/* <Typography
+                  {/* title */}
+                  <Typography
                     variant="h4"
                     fontSize={{ xs: "2rem", md: "2rem", lg: "4rem" }}
                     fontWeight="700"
@@ -101,9 +101,17 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                       ...uiConfigs.style.typoLines(2, "left")
                     }}
                   >
-                    {item.title || item.name}
-                  </Typography> */}
+                    Binhhuun
+                  </Typography>
+                  {/* title */}
 
+                  {/* overview */}
+                  <Typography variant="body1" sx={{
+                    ...uiConfigs.style.typoLines(3)
+                  }}>
+                    Composed and produced by Christopher Larkin, Hollow Knight’s epic score is woven throughout the game, echoing the sadness of a majestic civilisation brought to ruin.
+                  </Typography>
+                  {/* overview */}
 
                   {/* buttons */}
                   <Button
@@ -114,7 +122,7 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                     to={routesGen.mediaDetail(mediaType, item.id)}
                     sx={{ width: "max-content" }}
                   >
-                    Watch now
+                    watch now
                   </Button>
                   {/* buttons */}
                 </Stack>
