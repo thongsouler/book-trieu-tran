@@ -21,7 +21,7 @@ import CircularRate from "../common/CircularRate";
 
 const media = [
   {
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987722169-VV6ZASHHZNRBJW9X0PLK/Key_Art_02_layeredjpg.jpg?format=2500w",
+    img: "https://i.ibb.co/2FjkpFz/12.jpg",
   }
 ]
 
@@ -35,7 +35,7 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
       "&::before": {
         content: '""',
         width: "100%",
-        height: "30%",
+        height: "5%",
         position: "absolute",
         bottom: 0,
         left: 0,
@@ -56,7 +56,7 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
       >
         {media.map((item, index) => (
           <SwiperSlide key={index}>
-            <Box sx={{
+            <Box sx={{           
               paddingTop: {
                 xs: "130%",
                 sm: "80%",
@@ -65,16 +65,18 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
               },
               backgroundPosition: "top",
               backgroundSize: "cover",
-              backgroundImage: `url(${item.img})`
+              backgroundImage: `url(${item.img})`,
+              filter: "brightness(1.2) contrast(1.1)"
+              
             }} />
-            <Box sx={{
+            {/* <Box sx={{
               width: "100%",
-              height: "100%",
+              height: "100%", // Adjust this value to control the overlay height
               position: "absolute",
               top: 0,
               left: 0,
               ...uiConfigs.style.horizontalGradientBgImage[theme.palette.mode]
-            }} />
+            }} /> */}
             <Box sx={{
               width: "100%",
               height: "100%",
@@ -93,28 +95,32 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
               }}>
                 <Stack spacing={4} direction="column">
                   {/* title */}
-                  <Typography
+                  {/* <Typography
                     variant="h4"
                     fontSize={{ xs: "2rem", md: "2rem", lg: "4rem" }}
                     fontWeight="700"
                     sx={{
-                      ...uiConfigs.style.typoLines(2, "left")
+                      ...uiConfigs.style.typoLines(2, "left"),
+                     
                     }}
                   >
-                    Binhhuun
-                  </Typography>
+                    THẦN CHIẾN<br />
+                    TRIỀU TRẦN
+                  </Typography> */}
+
+                  
                   {/* title */}
 
                   {/* overview */}
-                  <Typography variant="body1" sx={{
+                  {/* <Typography variant="body1" sx={{
                     ...uiConfigs.style.typoLines(3)
                   }}>
-                    Composed and produced by Christopher Larkin, Hollow Knight’s epic score is woven throughout the game, echoing the sadness of a majestic civilisation brought to ruin.
-                  </Typography>
+                    Phần 2 -  Vũ Phiên
+                  </Typography> */}
                   {/* overview */}
 
                   {/* buttons */}
-                  <Button
+                  {/* <Button
                     variant="contained"
                     size="large"
                     startIcon={<PlayArrowIcon />}
@@ -122,8 +128,8 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                     to={routesGen.mediaDetail(mediaType, item.id)}
                     sx={{ width: "max-content" }}
                   >
-                    watch now
-                  </Button>
+                    MUA NGAY
+                  </Button> */}
                   {/* buttons */}
                 </Stack>
               </Box>

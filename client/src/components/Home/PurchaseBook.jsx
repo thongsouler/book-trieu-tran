@@ -59,7 +59,7 @@ const PurchaseBook = () => {
             }}
           >
             <Typography variant="h6" fontWeight="700" textTransform="uppercase" textAlign="left">
-              A Haunting, Orchestral Score
+              ĐẶT MUA LIỀN TAY, HƯỞNG ƯU ĐÃI LỚN
             </Typography>
           </Box>
           <Box
@@ -72,7 +72,7 @@ const PurchaseBook = () => {
             }}
           >
             <p >
-              Composed and produced by Christopher Larkin, Hollow Knight’s epic score is woven throughout the game, echoing the sadness of a majestic civilisation brought to ruin.
+            Pre-Order “Thần Chiến Triều Trần” cũng là một cách để hỗ trợ tài chính cho tác giả, với mong ước thực hiện Dự án này để làm mới phong cách kể truyện về lịch sử, khiến cho các bạn trẻ nói riêng và người dân Việt Nam nói chung, có được món ăn tinh thần hấp dẫn về đề tài vốn bị đánh giá là khô khan. Thông qua đó, khơi gợi lên sự tò mò, thích thú, hứng khởi của giới trẻ đối với lịch sử nước nhà.
             </p>
           </Box>
           <Box sx={{
@@ -91,7 +91,7 @@ const PurchaseBook = () => {
               // to={routesGen.mediaDetail(mediaType, item.id)}
               sx={{ width: "max-content" }}
             >
-              Purchase the Official Soundtrack
+              LIÊN HỆ MUA HÀNG
             </Button>
           </Box>
         </Box>

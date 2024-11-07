@@ -1,0 +1,15 @@
+/* Màu trắng cho mũi tên */
+.swiper-button-next, .swiper-button-prev {
+    color: #ffffff; /* Màu trắng */
+  }
+  
+  /* Màu đỏ cho dot */
+  .swiper-pagination-bullet {
+    background-color: #ff0000; /* Màu đỏ */
+  }
+  
+  /* Dot màu đỏ đậm hơn khi được chọn */
+  .swiper-pagination-bullet-active {
+    background-color: #cc0000; /* Đỏ đậm hơn */
+  }
+  

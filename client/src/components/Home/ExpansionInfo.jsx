@@ -3,26 +3,27 @@ import { useDispatch } from "react-redux";
 
 const data = [
   {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
+    title: "Quyết chiến Chuột tinh",
+    img: "https://i.ibb.co/VVcHRkL/t.jpg",
+    desc: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời.",
   },
   {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
+    title: "Ngã ba Trung Hà",
+    img: "https://i.ibb.co/MhgrNv5/UT-2024-11-05-at-18-03-03.png",
+    desc: "Máu đổ xuống vì hòa bình và tự do của dân tộc, để lại trong lòng người sau bao niềm tự hào.",
   },
   {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
+    title: "Đông A Xích Thố",
+    img: "https://i.ibb.co/VVcHRkL/t.jpg",
+    desc: "Họ là những biểu tượng của lòng yêu nước, sự quả cảm và mưu lược.",
   },
   {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
+    title: "Vó ngựa rền vang",
+    img: "https://i.ibb.co/MhgrNv5/UT-2024-11-05-at-18-03-03.png",
+    desc: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời.",
   }
 ]
+
 
 const ExpansionInfo = () => {
   const theme = useTheme();

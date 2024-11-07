@@ -4,24 +4,24 @@ import { useDispatch } from "react-redux";
 const data = [
   {
     type: "left",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    title: "Brave the Depths of a Forgotten Kingdom",
-    desc1: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-    desc2: "As the enigmatic Knight, you’ll traverse the depths, unravel its mysteries and conquer its evils."
+    img: "https://i.ibb.co/SmGLwRT/2.jpg",
+    title: "Thần Chiến Triều Trần: Huyền Thoại Một Dân Tộc",
+    desc1: "Trong thời kỳ hưng thịnh của nhà Trần, đất nước Đại Việt đối mặt với vô số hiểm nguy từ những thế lực ngoại bang hùng mạnh. Giữa thời loạn lạc, những chiến binh anh dũng đã đứng lên bảo vệ quê hương.",
+    desc2: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời."
   },
   {
     type: "right",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    title: "Brave the Depths of a Forgotten Kingdom",
-    desc1: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-    desc2: "As the enigmatic Knight, you’ll traverse the depths, unravel its mysteries and conquer its evils."
+    img: "https://i.ibb.co/CKt8pQX/1.jpg",
+    title: "Những Vị Tướng Kiệt Xuất",
+    desc1: "Trần Hưng Đạo, Trần Quang Khải, Trần Nhật Duật - những vị tướng tài ba không chỉ được biết đến bởi sự thông thái mà còn vì lòng quyết tâm chống lại sự xâm lăng tàn bạo của quân Nguyên Mông.",
+    desc2: "Họ là những biểu tượng của lòng yêu nước, sự quả cảm và mưu lược."
   },
   {
     type: "left",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    title: "Brave the Depths of a Forgotten Kingdom",
-    desc1: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-    desc2: "As the enigmatic Knight, you’ll traverse the depths, unravel its mysteries and conquer its evils."
+    img: "https://i.ibb.co/g9jL27p/3.jpg",
+    title: "Cuộc Đối Đầu Sinh Tử",
+    desc1: "Trong mỗi trận chiến khốc liệt, các chiến binh đã chiến đấu đến hơi thở cuối cùng, từng bước ngăn chặn kẻ thù từ phương Bắc. Những con sông, ngọn núi đều khắc ghi dấu ấn của những cuộc chiến sinh tử ấy.",
+    desc2: "Máu đổ xuống vì hòa bình và tự do của dân tộc, để lại trong lòng người sau bao niềm tự hào."
   }
 ]
 
@@ -58,7 +58,7 @@ const StoryDescription = () => {
                 alignItems: "center",
                 color: "text.primary",
                 width: { xs: "100%", sm: "100%" },
-                paddingX: { xs: "0px", sm: "30px" },
+                paddingX: { xs: "0px", sm: "60px" },
                 order: item.type == "left" ? 1 : 2
               }}
             >
@@ -67,7 +67,7 @@ const StoryDescription = () => {
                 style={{
                   maxWidth: "100%",
                   height: "auto",
-                  width: "100%"
+                  width: "80%"
                 }}
               />
             </Box>

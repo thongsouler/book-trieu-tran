@@ -13,10 +13,12 @@ import PurchaseBook from '../components/Home/PurchaseBook';
 const Home = () => {
   return (
     <>
-      <HomeSlide mediaType={tmdbConfigs.mediaType.movie} mediaCategory={tmdbConfigs.mediaCategory.popular} />
+      <Box sx={{ marginTop: "4rem" }}> {/* Adjust margin to push HomeSlide down */}
+        <HomeSlide mediaType={tmdbConfigs.mediaType.movie} mediaCategory={tmdbConfigs.mediaCategory.popular} />
+      </Box>
 
       <Box marginTop="-4rem" sx={{ ...uiConfigs.style.mainContent }}>
-        <Container header="Descend into the Dark">
+        <Container header="THẦN CHIẾN TRIỀU TRẦN">
           <StoryDescription />
         </Container>
 
@@ -25,12 +27,12 @@ const Home = () => {
             height: "100%",
             alignItems: "center",
             width: "100%",
-            marginTop: "20px"
+            marginTop: "60px"
           }}
         >
-          <iframe src="https://www.youtube.com/embed/JuP47fRBsWg?wmode=opaque&amp;enablejsapi=1" height="480" width="100%" scrolling="no" frameborder="0" allowfullscreen="" id="yui_3_17_2_1_1730799240738_106"></iframe>
+          <iframe width="100%" height="600" src="https://www.youtube.com/embed/KWMgZ_5_ILo?si=BJSdS3ThFa05Sgv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </Box>
-        <Container header="Hollow Knight Expands with 4 Giant Free Content Packs">
+        <Container header="ĐỌC THỬ CÁC PHẦN TRUYỆN">
           <ExpansionInfo />
         </Container>
         <PurchaseBook />

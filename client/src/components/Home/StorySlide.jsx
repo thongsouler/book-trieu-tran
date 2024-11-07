@@ -1,18 +1,22 @@
 import { Box, Stack, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper";
+import "swiper/swiper-bundle.min.css"; // Import styles
+import "swiper/swiper.min.css";
+import "./mySwiperStyles.css"; // Import custom styles
 
 const media = [
   {
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/3d24e1c8-d368-4b05-bb5f-00888e238d12/Grimm.jpg",
+    img: "https://i.ibb.co/2FjkpFz/12.jpg",
   },
   {
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/3d24e1c8-d368-4b05-bb5f-00888e238d12/Grimm.jpg",
+    img: "https://i.ibb.co/2FjkpFz/12.jpg",
   },
   {
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/3d24e1c8-d368-4b05-bb5f-00888e238d12/Grimm.jpg",
+    img: "https://i.ibb.co/2FjkpFz/12.jpg",
   },
   {
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/3d24e1c8-d368-4b05-bb5f-00888e238d12/Grimm.jpg",
+    img: "https://i.ibb.co/2FjkpFz/12.jpg",
   },
 ]
 
@@ -27,12 +31,16 @@ const StorySlide = () => {
       <Swiper
         grabCursor={true}
         loop={true}
-        // modules={[Autoplay]}
+        modules={[Pagination, Navigation, Autoplay]}
         style={{ width: "100%", height: "max-content" }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false
         }}
+        pagination={{
+          clickable: true, // Dots are clickable
+        }}
+        navigation={true} // Enables navigation arrows
       >
         {media.map((item, index) => (
           <SwiperSlide key={index}>

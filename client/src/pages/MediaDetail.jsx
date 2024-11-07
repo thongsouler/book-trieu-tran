@@ -207,7 +207,7 @@ const MediaDetail = () => {
                       startIcon={<PlayArrowIcon />}
                       onClick={() => videoRef.current.scrollIntoView()}
                     >
-                      watch now
+                      MUA NGAY
                     </Button>
                   </Stack>
                   {/* buttons */}

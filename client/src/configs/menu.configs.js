@@ -7,29 +7,30 @@ import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
 import LockResetOutlinedIcon from "@mui/icons-material/LockResetOutlined";
 
 const main = [
+ 
   {
-    display: "home",
-    path: "/",
-    icon: <HomeOutlinedIcon />,
-    state: "home"
-  },
-  {
-    display: "movies",
+    display: "Giới thiệu",
     path: "/movie",
     icon: <SlideshowOutlinedIcon />,
     state: "movie"
   },
   {
-    display: "tv series",
+    display: "Liên hệ",
     path: "/tv",
     icon: <LiveTvOutlinedIcon />,
     state: "tv"
   },
   {
-    display: "search",
+    display: "Đọc thử",
     path: "/search",
     icon: <SearchOutlinedIcon />,
     state: "search"
+  },
+  {
+    display: "Mua ngay",
+    path: "/",
+    icon: <HomeOutlinedIcon />,
+    state: "home"
   }
 ];
 
