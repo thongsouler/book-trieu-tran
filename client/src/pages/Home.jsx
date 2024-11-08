@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { useEffect , useLayoutEffect} from 'react';
 import tmdbConfigs from "../api/configs/tmdb.configs";
 import Container from "../components/common/Container";
 import MediaSlide from "../components/common/MediaSlide";
@@ -9,20 +9,33 @@ import StoryDescription from '../components/Home/StoryDescription';
 import ExpansionInfo from '../components/Home/ExpansionInfo';
 import StorySlide from '../components/Home/StorySlide';
 import PurchaseBook from '../components/Home/PurchaseBook';
+import AOS from 'aos';
 
 const Home = () => {
+
+
+  useLayoutEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'linear',
+      delay: 50,
+    });
+  }, []);
+
   return (
     <>
       <Box sx={{ marginTop: "4rem" }}> {/* Adjust margin to push HomeSlide down */}
         <HomeSlide mediaType={tmdbConfigs.mediaType.movie} mediaCategory={tmdbConfigs.mediaCategory.popular} />
       </Box>
 
-      <Box marginTop="-4rem" sx={{ ...uiConfigs.style.mainContent }}>
+      <Box  marginTop="-4rem" sx={{ ...uiConfigs.style.mainContent }}>
         <Container header="THẦN CHIẾN TRIỀU TRẦN">
           <StoryDescription />
         </Container>
 
         <Box
+          data-aos="fade-up"
           sx={{
             height: "100%",
             alignItems: "center",

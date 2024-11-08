@@ -4,6 +4,8 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import "swiper/swiper-bundle.min.css"; // Import styles
 import "swiper/swiper.min.css";
 import "./mySwiperStyles.css"; // Import custom styles
+import AOS from 'aos';
+import React, { useEffect , useLayoutEffect} from 'react';
 
 const media = [
   {
@@ -21,13 +23,22 @@ const media = [
 ]
 
 const StorySlide = () => {
-
+  useLayoutEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'linear',
+      delay: 100,
+    });
+  }, []);
   return (
-    <Box sx={{
-      position: "relative",
-      color: "primary.contrastText",
-      marginTop: "50px"
-    }}>
+    <Box
+      data-aos="fade-up"
+      sx={{
+        position: "relative",
+        color: "primary.contrastText",
+        marginTop: "50px"
+      }}>
       <Swiper
         grabCursor={true}
         loop={true}

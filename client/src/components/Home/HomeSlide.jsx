@@ -32,6 +32,9 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
     <Box sx={{
       position: "relative",
       color: "primary.contrastText",
+      filter: "brightness(1.2) contrast(1.1)",
+      "&:hover .bg-children": { opacity: 1 },
+      color: "primary.contrastText",
       "&::before": {
         content: '""',
         width: "100%",
@@ -43,7 +46,9 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
         pointerEvents: "none",
         ...uiConfigs.style.gradientBgImage[theme.palette.mode]
       }
-    }}>
+    }}
+      className="bg-farther"
+    >
       <Swiper
         grabCursor={true}
         loop={true}
@@ -56,35 +61,44 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
       >
         {media.map((item, index) => (
           <SwiperSlide key={index}>
-            <Box sx={{           
-              paddingTop: {
-                xs: "130%",
-                sm: "80%",
-                md: "60%",
-                lg: "45%"
-              },
-              backgroundPosition: "top",
-              backgroundSize: "cover",
-              backgroundImage: `url(${item.img})`,
-              filter: "brightness(1.2) contrast(1.1)"
-              
-            }} />
-            {/* <Box sx={{
-              width: "100%",
-              height: "100%", // Adjust this value to control the overlay height
-              position: "absolute",
-              top: 0,
-              left: 0,
-              ...uiConfigs.style.horizontalGradientBgImage[theme.palette.mode]
-            }} /> */}
-            <Box sx={{
-              width: "100%",
-              height: "100%",
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              paddingX: { sm: "10px", md: "5rem", lg: "10rem" }
-            }}>
+            <Box
+              sx={{
+                position: "relative",
+                paddingTop: {
+                  xs: "130%",
+                  sm: "80%",
+                  md: "60%",
+                  lg: "45%",
+                },
+                backgroundPosition: "top",
+                backgroundSize: "cover",
+                backgroundImage: `url(${item.img})`
+              }}
+            />
+            <Box
+              sx={{
+
+                width: "100%",
+                height: "100%",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                backgroundImage: "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))",
+                opacity: { xs: 1, md: 0 },
+                transition: "all 0.3s ease",
+              }}
+              className="bg-children"
+            />
+            <Box
+              sx={{
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                paddingX: "30px",
+                color: "text.primary",
+                width: { sm: "unset", md: "30%", lg: "40%" },
+              }}
+            >
               <Box sx={{
                 height: "100%",
                 display: "flex",
@@ -108,7 +122,7 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                     TRIỀU TRẦN
                   </Typography> */}
 
-                  
+
                   {/* title */}
 
                   {/* overview */}
@@ -134,10 +148,10 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                 </Stack>
               </Box>
             </Box>
-          </SwiperSlide>
+          </SwiperSlide >
         ))}
-      </Swiper>
-    </Box>
+      </Swiper >
+    </Box >
   );
 };
 

@@ -1,6 +1,7 @@
 import { Box, Stack, useTheme, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
-
+import AOS from 'aos';
+import React, { useEffect, useLayoutEffect } from 'react';
 const data = [
   {
     title: "Quyết chiến Chuột tinh",
@@ -28,7 +29,14 @@ const data = [
 const ExpansionInfo = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-
+  useLayoutEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'linear',
+      delay: 100,
+    });
+  }, []);
   return (
     <Box>
       <Stack
@@ -42,6 +50,7 @@ const ExpansionInfo = () => {
       >
         {data.map((item, index) => (
           <Box
+            data-aos={index == 0 || index == 1 ? "fade-right" : "fade-left"}
             sx={{
               height: "100%",
               display: { xs: "block", sm: "block" },

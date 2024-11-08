@@ -34,6 +34,9 @@ const themeConfigs = {
     };
 
     return createTheme({
+      typography: {
+        fontFamily: "Grenze"
+      },
       palette: {
         mode,
         ...customPalette

@@ -1,5 +1,7 @@
 import { Box, Stack, useTheme, Typography, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
+import React, { useEffect , useLayoutEffect} from 'react';
+import AOS from 'aos';
 
 const data = [
   {
@@ -27,9 +29,18 @@ const data = [
 const PurchaseBook = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-
+  useLayoutEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'linear',
+      delay: 100,
+    });
+  }, []);
   return (
-    <Box>
+    <Box
+      data-aos="fade-up"
+    >
       <Stack
         spacing={4}
         direction={{ xs: "column", sm: "row" }}
@@ -72,7 +83,7 @@ const PurchaseBook = () => {
             }}
           >
             <p >
-            Pre-Order “Thần Chiến Triều Trần” cũng là một cách để hỗ trợ tài chính cho tác giả, với mong ước thực hiện Dự án này để làm mới phong cách kể truyện về lịch sử, khiến cho các bạn trẻ nói riêng và người dân Việt Nam nói chung, có được món ăn tinh thần hấp dẫn về đề tài vốn bị đánh giá là khô khan. Thông qua đó, khơi gợi lên sự tò mò, thích thú, hứng khởi của giới trẻ đối với lịch sử nước nhà.
+              Pre-Order “Thần Chiến Triều Trần” cũng là một cách để hỗ trợ tài chính cho tác giả, với mong ước thực hiện Dự án này để làm mới phong cách kể truyện về lịch sử, khiến cho các bạn trẻ nói riêng và người dân Việt Nam nói chung, có được món ăn tinh thần hấp dẫn về đề tài vốn bị đánh giá là khô khan. Thông qua đó, khơi gợi lên sự tò mò, thích thú, hứng khởi của giới trẻ đối với lịch sử nước nhà.
             </p>
           </Box>
           <Box sx={{

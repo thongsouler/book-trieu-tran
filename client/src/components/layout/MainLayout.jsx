@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import userApi from "../../api/modules/user.api";
 import favoriteApi from "../../api/modules/favorite.api";
 import { setListFavorites, setUser } from "../../redux/features/userSlice";
+import ScrollToTop from "../common/ScrollToTop/ScrollToTop";
 
 const MainLayout = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,8 @@ const MainLayout = () => {
 
   return (
     <>
+      <ScrollToTop />
+
       {/* global loading */}
       <GlobalLoading />
       {/* global loading */}

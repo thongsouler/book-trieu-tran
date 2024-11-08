@@ -1,5 +1,7 @@
 import { Box, Stack, useTheme, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
+import AOS from 'aos';
+import React, { useEffect, useLayoutEffect } from 'react';
 
 const data = [
   {
@@ -28,11 +30,19 @@ const data = [
 const StoryDescription = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-
+  useLayoutEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'linear',
+      delay: 100,
+    });
+  }, []);
   return (
     <Box>
       {data.map((item, index) => (
         <Box
+          data-aos="fade-up"
           sx={{
             height: "100%",
             display: { xs: "block", sm: "flex" },
