@@ -7,7 +7,7 @@ const data = [
   {
     type: "left",
     img: "https://i.ibb.co/SmGLwRT/2.jpg",
-    title: "Thần Chiến Triều Trần: Huyền Thoại Một Dân Tộc",
+    title: "Thần Chiến Triều Trần: Huyền Thoại Dân Tộc",
     desc1: "Trong thời kỳ hưng thịnh của nhà Trần, đất nước Đại Việt đối mặt với vô số hiểm nguy từ những thế lực ngoại bang hùng mạnh. Giữa thời loạn lạc, những chiến binh anh dũng đã đứng lên bảo vệ quê hương.",
     desc2: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời."
   },
@@ -111,7 +111,7 @@ const StoryDescription = () => {
                   width: "100%"
                 }}
               >
-                <p >
+                <p  className="text-normal">
                   {item.desc1}
                 </p>
               </Box>
@@ -123,7 +123,7 @@ const StoryDescription = () => {
                   width: "100%"
                 }}
               >
-                <p>
+                <p className="text-normal">
                   {item.desc2}
                 </p>
               </Box>

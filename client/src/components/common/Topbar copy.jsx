@@ -75,7 +75,8 @@ const Topbar = () => {
                   key={index}
                   sx={{
                     color: appState.includes(item.state) ? "primary.contrastText" : "inherit",
-                    mr: 2
+                    mr: 2,
+                    fontWeight: 700
                   }}
                   component={Link}
                   to={item.path}

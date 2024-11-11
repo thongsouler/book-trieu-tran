@@ -1,5 +1,5 @@
 body {
-  font-family: "Grenze", serif;
+  font-family: "Chakra Petch", sans-serif;
 
   a {
     color: unset;
@@ -47,4 +47,10 @@ li {}
   &:hover {
     background: red;
   }
+}
+
+.text-normal {
+  // font-family: 'Noto Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
 }

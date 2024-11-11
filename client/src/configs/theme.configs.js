@@ -35,7 +35,7 @@ const themeConfigs = {
 
     return createTheme({
       typography: {
-        fontFamily: "Grenze"
+        fontFamily: "Chakra Petch"
       },
       palette: {
         mode,

@@ -76,18 +76,18 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
               }}
             />
             <Box
-              sx={{
+            // sx={{
 
-                width: "100%",
-                height: "100%",
-                position: "absolute",
-                top: 0,
-                left: 0,
-                backgroundImage: "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))",
-                opacity: { xs: 1, md: 0 },
-                transition: "all 0.3s ease",
-              }}
-              className="bg-children"
+            //   width: "100%",
+            //   height: "100%",
+            //   position: "absolute",
+            //   top: 0,
+            //   left: 0,
+            //   backgroundImage: "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))",
+            //   opacity: { xs: 1, md: 0 },
+            //   transition: "all 0.3s ease",
+            // }}
+            // className="bg-children"
             />
             <Box
               sx={{
