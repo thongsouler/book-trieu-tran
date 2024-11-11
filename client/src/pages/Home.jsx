@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { useEffect , useLayoutEffect} from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import tmdbConfigs from "../api/configs/tmdb.configs";
 import Container from "../components/common/Container";
 import MediaSlide from "../components/common/MediaSlide";
@@ -29,7 +29,7 @@ const Home = () => {
         <HomeSlide mediaType={tmdbConfigs.mediaType.movie} mediaCategory={tmdbConfigs.mediaCategory.popular} />
       </Box>
 
-      <Box  marginTop="-4rem" sx={{ ...uiConfigs.style.mainContent }}>
+      <Box marginTop="-4rem" sx={{ ...uiConfigs.style.mainContent }} id="idScrollDes">
         <Container header="THẦN CHIẾN TRIỀU TRẦN">
           <StoryDescription />
         </Container>

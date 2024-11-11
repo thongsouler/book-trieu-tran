@@ -1,7 +1,9 @@
-import { Box, Stack, useTheme, Typography } from "@mui/material";
+import { Box, Stack, useTheme, Typography, Button, useMediaQuery, Grid } from "@mui/material";
 import { useDispatch } from "react-redux";
 import AOS from 'aos';
 import React, { useEffect, useLayoutEffect } from 'react';
+import uiConfigs from "../../configs/ui.configs";
+import { useResponsive } from "../../hooks/useResponsive";
 const data = [
   {
     title: "Quyết chiến Chuột tinh",
@@ -29,6 +31,9 @@ const data = [
 const ExpansionInfo = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   useLayoutEffect(() => {
     AOS.init({
       offset: 200,
@@ -39,9 +44,9 @@ const ExpansionInfo = () => {
   }, []);
   return (
     <Box>
-      <Stack
-        spacing={4}
-        direction={{ xs: "column", sm: "row" }}
+      <Grid
+        container
+        spacing={2}
         sx={{
           width: "100%",
           alignItems: "center",
@@ -49,67 +54,114 @@ const ExpansionInfo = () => {
         }}
       >
         {data.map((item, index) => (
-          <Box
-            data-aos={index == 0 || index == 1 ? "fade-right" : "fade-left"}
-            sx={{
-              height: "100%",
-              display: { xs: "block", sm: "block" },
-              alignItems: "center",
-              color: "text.primary",
-              width: "100%",
-              marginTop: "20px"
-            }}
-          >
+          <Grid item xs={6} sm={3}>
             <Box
-              sx={{
-                height: "100%",
-                alignItems: "center",
-                color: "text.primary",
-                width: "100%",
-              }}
-            >
-              <Typography variant="h6" fontWeight="700" textTransform="uppercase" textAlign="center">
-                {item.title}
-              </Typography>
-            </Box>
-            <Box
+              data-aos={index == 0 || index == 1 ? "fade-right" : "fade-left"}
               sx={{
                 height: "100%",
                 display: { xs: "block", sm: "block" },
                 alignItems: "center",
                 color: "text.primary",
-                width: { xs: "100%", sm: "100%" },
-                paddingX: { xs: "0px", sm: "30px" },
-                marginTop: { xs: "15px", sm: "15px" },
-                marginBottom: { xs: "15px", sm: "15px" },
+                width: "100%",
+                marginTop: "20px",
+                "&:hover .media-info": { opacity: 1, bottom: 0 },
+                "&:hover .media-back-drop, &:hover .media-play-btn": { opacity: 1 },
               }}
             >
-              <img
-                src={item.img}
-                style={{
+              <Box
+                sx={{
+                  height: "100%",
+                  alignItems: "center",
+                  color: "text.primary",
+                  width: "100%",
+                }}
+              >
+                <Typography variant="h6" fontWeight="700" textTransform="uppercase" textAlign="center">
+                  {item.title}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  height: "100%",
+                  display: { xs: "block", sm: "block" },
+                  alignItems: "center",
+                  color: "text.primary",
+                  width: { xs: "100%", sm: "100%" },
+                  paddingX: { xs: "0px", sm: "30px" },
+                  marginTop: { xs: "15px", sm: "15px" },
+                  marginBottom: { xs: "15px", sm: "15px" },
+                }}
+              >
+
+                <Box sx={{
+                  ...uiConfigs.style.backgroundImage(item.img),
+                  paddingTop: "160%",
+                  "&:hover .media-info": { opacity: 1, bottom: 0 },
+                  "&:hover .media-back-drop, &:hover .media-play-btn": { opacity: 1 },
                   maxWidth: "100%",
                   height: "auto",
-                  width: "100%"
+                  width: "100%",
+                  color: "primary.contrastText"
+                }}>
+                  <>
+                    <Box className="media-back-drop" sx={{
+                      opacity: { xs: 1, md: 0 },
+                      transition: "all 0.3s ease",
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      backgroundImage: "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))"
+                    }} />
+                    <Button
+                      key={index}
+                      sx={{
+                        display: { xs: "none", md: "flex" },
+                        cursor: "pointer",
+                        opacity: 0,
+                        transition: "all 0.3s ease",
+                        position: "absolute",
+                        top: "70%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        "& .MuiButton-startIcon": { marginRight: "-4px" },
+                      }}
+                      variant={"contained"}
+                      onClick={() => {
+                        window.open("https://www.google.com.vn/", "_blank"); // Mở trong tab mới
+                      }}
+                      className="media-play-btn"
+                    >
+                      Mua ngay
+                    </Button>
+                  </>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  height: "100%",
+                  alignItems: "center",
+                  color: "text.secondary",
+                  width: "100%",
+                  textAlign: "center"
                 }}
-              />
+              >
+                <p style={{
+                  WebkitLineClamp: 2,
+                  textOverflow: "ellipsis",
+                  overflow: "hidden",
+                  display: "-webkit-box",
+                  WebkitBoxOrient: "vertical"
+                }}>
+                  {item.desc}
+                </p>
+              </Box>
             </Box>
-            <Box
-              sx={{
-                height: "100%",
-                alignItems: "center",
-                color: "text.secondary",
-                width: "100%",
-                textAlign: "center"
-              }}
-            >
-              <p >
-                {item.desc}
-              </p>
-            </Box>
-          </Box>
+          </Grid>
         ))}
-      </Stack >
-    </Box>
+      </Grid >
+    </Box >
   );
 };
 

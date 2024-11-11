@@ -1,6 +1,6 @@
 import { Box, Stack, useTheme, Typography, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
-import React, { useEffect , useLayoutEffect} from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import AOS from 'aos';
 
 const data = [
@@ -40,6 +40,7 @@ const PurchaseBook = () => {
   return (
     <Box
       data-aos="fade-up"
+      id="idScrollBuyNow"
     >
       <Stack
         spacing={4}

@@ -18,10 +18,11 @@ import genreApi from "../../api/modules/genre.api";
 import mediaApi from "../../api/modules/media.api";
 import CircularRate from "../common/CircularRate";
 
+import HomeSlideImg from "../../assets/images/home-slide.png"
 
 const media = [
   {
-    img: "https://i.ibb.co/2FjkpFz/12.jpg",
+    img: HomeSlideImg,
   }
 ]
 

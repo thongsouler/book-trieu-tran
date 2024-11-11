@@ -47,12 +47,31 @@ const Topbar = () => {
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
+
+  const scrollTo = (id) => {
+    if (id) {
+
+      const item = document.getElementById(id)
+      const pos = item.offsetTop
+      const headerDiv = document.querySelector(".container-header")
+      const headerHeight = headerDiv ? headerDiv.offsetHeight : 0
+      const offsetTop = pos - headerHeight
+      const offset = offsetTop > 0 ? offsetTop : 0
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      }, offset)
+      return;
+    }
+    return;
+  }
+
   return (
     <>
       <Sidebar open={sidebarOpen} toggleSidebar={toggleSidebar} />
       {/* <button id="clickMeButton">click here</button> */}
-      <ScrollAppBar>
-        <AppBar elevation={0} sx={{ zIndex: 9999 }}>
+      <ScrollAppBar >
+        <AppBar elevation={0} sx={{ zIndex: 9999 }} className="container-header">
           <Toolbar sx={{ alignItems: "center", justifyContent: "space-between" }}>
 
             {/* <OpenNewWindows /> */}
@@ -67,14 +86,14 @@ const Topbar = () => {
               </IconButton>
 
               <Box sx={{ display: { xs: "inline-block", md: "none" } }}>
-                <Logo />
+                <Logo scrollTo={scrollTo} />
               </Box>
             </Stack>
 
             {/* main menu */}
-            <Box flexGrow={1} alignItems="center" display={{ xs: "none", md: "flex" }}>
+            <Box flexGrow={1} alignItems="center" display={{ xs: "none", md: "flex" }} >
               <Box sx={{ marginRight: "30px" }}>
-                <Logo />
+                <Logo scrollTo={scrollTo} />
               </Box>
               {menuConfigs.main.map((item, index) => (
                 <Button
@@ -84,8 +103,11 @@ const Topbar = () => {
                     mr: 2,
                     fontWeight: 700
                   }}
-                  component={Link}
-                  to={item.path}
+                  // component={Link}
+                  // to={item.path}
+                  onClick={() => {
+                    scrollTo(item.idScroll)
+                  }}
                   variant={appState.includes(item.state) ? "contained" : "text"}
                 >
                   {item.display}
