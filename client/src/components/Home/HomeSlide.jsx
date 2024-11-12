@@ -18,7 +18,7 @@ import genreApi from "../../api/modules/genre.api";
 import mediaApi from "../../api/modules/media.api";
 import CircularRate from "../common/CircularRate";
 
-import HomeSlideImg from "../../assets/images/home-slide.png"
+import HomeSlideImg from "../../assets/images/home-slide.jpg"
 
 const media = [
   {
