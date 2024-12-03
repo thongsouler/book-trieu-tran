@@ -22,15 +22,15 @@ export const routesGen = {
 
 const routes = [
   {
-    path: "/home2",
-    element: <Home />,
-    state: "home2"
-  },
-  {
     index: true,
-    element: <HomePage />,
+    element: <Home />,
     state: "home"
   },
+  // {
+  //   index: true,
+  //   element: <HomePage />,
+  //   state: "home"
+  // },
   {
     path: "/person/:personId",
     element: <PersonDetail />,
