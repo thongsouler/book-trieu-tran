@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/book-trieu-tran/static/css/main.09e9805c.css",
-    "main.js": "/book-trieu-tran/static/js/main.83fb6a07.js",
+    "main.js": "/book-trieu-tran/static/js/main.b57ca15c.js",
     "static/media/home-slide.jpg": "/book-trieu-tran/static/media/home-slide.b15e1286e8f8d11f1fc5.jpg",
     "static/media/roboto-all-500-normal.woff": "/book-trieu-tran/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/book-trieu-tran/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
@@ -37,10 +37,10 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "/book-trieu-tran/static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/book-trieu-tran/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "main.09e9805c.css.map": "/book-trieu-tran/static/css/main.09e9805c.css.map",
-    "main.83fb6a07.js.map": "/book-trieu-tran/static/js/main.83fb6a07.js.map"
+    "main.b57ca15c.js.map": "/book-trieu-tran/static/js/main.b57ca15c.js.map"
   },
   "entrypoints": [
     "static/css/main.09e9805c.css",
-    "static/js/main.83fb6a07.js"
+    "static/js/main.b57ca15c.js"
   ]
 }
