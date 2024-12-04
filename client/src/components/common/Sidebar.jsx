@@ -6,9 +6,9 @@ import Logo from "./Logo";
 import uiConfigs from "../../configs/ui.configs";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-
 import { themeModes } from "../../configs/theme.configs";
 import { setThemeMode } from "../../redux/features/themeModeSlice";
+import { headerScrollToId } from "./Topbar";
 
 const Sidebar = ({ open, toggleSidebar }) => {
   const dispatch = useDispatch();
@@ -41,9 +41,12 @@ const Sidebar = ({ open, toggleSidebar }) => {
               marginY: 1,
               backgroundColor: appState.includes(item.state) ? "primary.main" : "unset"
             }}
-            component={Link}
-            to={item.path}
-            onClick={() => toggleSidebar(false)}
+            // component={Link}
+            // to={item.path}
+            onClick={() => {
+              headerScrollToId(item.idScroll)
+              toggleSidebar(false)
+            }}
           >
             <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText disableTypography primary={<Typography textTransform="uppercase">

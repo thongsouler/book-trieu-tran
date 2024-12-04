@@ -9,21 +9,25 @@ const data = [
     title: "Quyết chiến Chuột tinh",
     img: "https://i.ibb.co/VVcHRkL/t.jpg",
     desc: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời.",
+    link: "/than-chien-trieu-tran-quyen-1-c22"
   },
   {
     title: "Ngã ba Trung Hà",
     img: "https://i.ibb.co/MhgrNv5/UT-2024-11-05-at-18-03-03.png",
     desc: "Máu đổ xuống vì hòa bình và tự do của dân tộc, để lại trong lòng người sau bao niềm tự hào.",
+    link: "than-chien-trieu-tran-quyen-1-c12"
   },
   {
     title: "Đông A Xích Thố",
     img: "https://i.ibb.co/VVcHRkL/t.jpg",
     desc: "Họ là những biểu tượng của lòng yêu nước, sự quả cảm và mưu lược.",
+    link: "/than-chien-trieu-tran-quyen-1-c20"
   },
   {
     title: "Vó ngựa rền vang",
     img: "https://i.ibb.co/MhgrNv5/UT-2024-11-05-at-18-03-03.png",
     desc: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời.",
+    link: "/than-chien-trieu-tran-quyen-1-c23"
   }
 ]
 
@@ -129,7 +133,7 @@ const ExpansionInfo = () => {
                       }}
                       variant={"contained"}
                       onClick={() => {
-                        window.open("https://www.google.com.vn/", "_blank"); // Mở trong tab mới
+                        window.open(item?.link, "_blank"); // Mở trong tab mới
                       }}
                       className="media-play-btn"
                     >

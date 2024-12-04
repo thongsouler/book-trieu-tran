@@ -1,13 +1,13 @@
-import HomePage from "../pages/HomePage";
-import PersonDetail from "../pages/PersonDetail";
+import ProtectedPage from "../components/common/ProtectedPage";
 import FavoriteList from "../pages/FavoriteList";
+import Home from "../pages/Home";
 import MediaDetail from "../pages/MediaDetail";
 import MediaList from "../pages/MediaList";
 import MediaSearch from "../pages/MediaSearch";
 import PasswordUpdate from "../pages/PasswordUpdate";
+import PersonDetail from "../pages/PersonDetail";
 import ReviewList from "../pages/ReviewList";
-import ProtectedPage from "../components/common/ProtectedPage";
-import Home from "../pages/Home";
+import StoryDetail from "../pages/StoryDetail";
 
 export const routesGen = {
   home: "/",
@@ -68,14 +68,19 @@ const routes = [
     ),
     state: "reviews"
   },
-  {
-    path: "/:mediaType",
-    element: <MediaList />
-  },
+  // {
+  //   path: "/:mediaType",
+  //   element: <MediaList />
+  // },
   {
     path: "/:mediaType/:mediaId",
     element: <MediaDetail />
-  }
+  },
+  {
+    path: "/:storyId",
+    element: <StoryDetail />,
+    state: "storyid.detail"
+  },
 ];
 
 export default routes;

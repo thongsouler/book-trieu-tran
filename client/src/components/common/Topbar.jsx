@@ -31,6 +31,28 @@ const ScrollAppBar = ({ children, window }) => {
     }
   });
 };
+
+export const headerScrollToId = (id) => {
+  if (id) {
+
+    const item = document.getElementById(id)
+    if (item) {
+      const pos = item.offsetTop
+      const headerDiv = document.querySelector(".container-header")
+      const headerHeight = headerDiv ? headerDiv.offsetHeight : 0
+      const offsetTop = pos - headerHeight
+      const offset = offsetTop > 0 ? offsetTop : 0
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      }, offset)
+      return;
+    } else {
+      window.location.pathname = "/"
+    }
+  }
+  return;
+}
 const Topbar = () => {
   const { user } = useSelector((state) => state.user);
   const { appState } = useSelector((state) => state.appState);
@@ -46,25 +68,6 @@ const Topbar = () => {
   };
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-
-
-  const scrollTo = (id) => {
-    if (id) {
-
-      const item = document.getElementById(id)
-      const pos = item.offsetTop
-      const headerDiv = document.querySelector(".container-header")
-      const headerHeight = headerDiv ? headerDiv.offsetHeight : 0
-      const offsetTop = pos - headerHeight
-      const offset = offsetTop > 0 ? offsetTop : 0
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      }, offset)
-      return;
-    }
-    return;
-  }
 
   return (
     <>
@@ -86,14 +89,14 @@ const Topbar = () => {
               </IconButton>
 
               <Box sx={{ display: { xs: "inline-block", md: "none" } }}>
-                <Logo scrollTo={scrollTo} />
+                <Logo scrollTo={headerScrollToId} />
               </Box>
             </Stack>
 
             {/* main menu */}
             <Box flexGrow={1} alignItems="center" display={{ xs: "none", md: "flex" }} >
               <Box sx={{ marginRight: "30px" }}>
-                <Logo scrollTo={scrollTo} />
+                <Logo scrollTo={headerScrollToId} />
               </Box>
               {menuConfigs.main.map((item, index) => (
                 <Button
@@ -106,7 +109,7 @@ const Topbar = () => {
                   // component={Link}
                   // to={item.path}
                   onClick={() => {
-                    scrollTo(item.idScroll)
+                    headerScrollToId(item.idScroll)
                   }}
                   variant={appState.includes(item.state) ? "contained" : "text"}
                 >

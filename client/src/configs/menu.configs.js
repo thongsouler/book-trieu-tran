@@ -1,10 +1,11 @@
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import SlideshowOutlinedIcon from "@mui/icons-material/SlideshowOutlined";
-import LiveTvOutlinedIcon from "@mui/icons-material/LiveTvOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LockResetOutlinedIcon from "@mui/icons-material/LockResetOutlined";
+import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import SlideshowOutlinedIcon from "@mui/icons-material/SlideshowOutlined";
+import ContactsIcon from '@mui/icons-material/Contacts';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const main = [
 
@@ -18,7 +19,7 @@ const main = [
   {
     display: "Liên hệ",
     path: "/tv",
-    icon: <LiveTvOutlinedIcon />,
+    icon: <ContactsIcon />,
     state: "tv",
     idScroll: "idScrollBuyNow"
   },
@@ -32,7 +33,7 @@ const main = [
   {
     display: "Mua ngay",
     path: "/",
-    icon: <HomeOutlinedIcon />,
+    icon: <AddShoppingCartIcon />,
     state: "home",
     idScroll: "idScrollBuyNow"
   }

@@ -4,6 +4,7 @@ import Container from './Container';
 import Logo from './Logo';
 import menuConfigs from "../../configs/menu.configs";
 import { Link } from "react-router-dom";
+import { headerScrollToId } from './Topbar';
 
 const Footer = () => {
   return (
@@ -21,8 +22,9 @@ const Footer = () => {
               <Button
                 key={index}
                 sx={{ color: "inherit" }}
-                component={Link}
-                to={item.path}
+                onClick={() => {
+                  headerScrollToId(item.idScroll)
+                }}
               >
                 {item.display}
               </Button>
