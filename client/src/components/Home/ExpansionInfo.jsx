@@ -122,6 +122,7 @@ const ExpansionInfo = () => {
                       key={index}
                       sx={{
                         // display: { xs: "none", md: "flex" },
+                        whiteSpace: "nowrap",
                         display: "flex",
                         cursor: "pointer",
                         opacity: { xs: 1, sm: 0 },
