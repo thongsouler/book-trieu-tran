@@ -121,7 +121,8 @@ const ExpansionInfo = () => {
                     <Button
                       key={index}
                       sx={{
-                        display: { xs: "none", md: "flex" },
+                        // display: { xs: "none", md: "flex" },
+                        display: "flex",
                         cursor: "pointer",
                         opacity: 0,
                         transition: "all 0.3s ease",
@@ -137,7 +138,7 @@ const ExpansionInfo = () => {
                       }}
                       className="media-play-btn"
                     >
-                      Mua ngay
+                      Đọc thử
                     </Button>
                   </>
                 </Box>
