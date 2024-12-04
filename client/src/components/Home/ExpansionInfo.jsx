@@ -109,7 +109,7 @@ const ExpansionInfo = () => {
                 }}>
                   <>
                     <Box className="media-back-drop" sx={{
-                      opacity: { xs: 1, md: 0 },
+                      opacity: { xs: 1, sm: 0 },
                       transition: "all 0.3s ease",
                       width: "100%",
                       height: "100%",
@@ -124,7 +124,7 @@ const ExpansionInfo = () => {
                         // display: { xs: "none", md: "flex" },
                         display: "flex",
                         cursor: "pointer",
-                        opacity: 0,
+                        opacity: { xs: 1, sm: 0 },
                         transition: "all 0.3s ease",
                         position: "absolute",
                         top: "70%",
