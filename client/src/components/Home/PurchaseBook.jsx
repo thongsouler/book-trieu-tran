@@ -81,6 +81,9 @@ const PurchaseBook = () => {
               variant="contained"
               size="large"
               sx={{ width: "max-content" }}
+              onClick={() => {
+                window.open("https://www.facebook.com/ThanChienTrieuTran/", "_blank");
+              }}
             >
               LIÊN HỆ MUA HÀNG
             </Button>

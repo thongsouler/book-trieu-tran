@@ -28,7 +28,7 @@ const main = [
     path: "/search",
     icon: <SearchOutlinedIcon />,
     state: "search",
-    idScroll: "idScrollBuyNow"
+    idScroll: "idScrollRead"
   },
   {
     display: "Mua ngay",

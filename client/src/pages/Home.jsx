@@ -45,9 +45,11 @@ const Home = () => {
         >
           <iframe width="100%" height="600" src="https://www.youtube.com/embed/KWMgZ_5_ILo?si=BJSdS3ThFa05Sgv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </Box>
-        <Container header="ĐỌC THỬ CÁC PHẦN TRUYỆN QUYỂN 1">
+        <Box id="idScrollRead">
+        <Container header="ĐỌC THỬ CÁC PHẦN TRUYỆN QUYỂN 1" >
           <ExpansionInfo />
-        </Container>
+        </Container></Box>
+       
         <Box
           sx={{
             height: "20px",

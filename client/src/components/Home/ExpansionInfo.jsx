@@ -13,27 +13,27 @@ const data = [
   {
     title: "Chương 01: Chiêu Văn Vương",
     img: Image1,
-    desc: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời.",
-    link: "/than-chien-trieu-tran-quyen-1-c22"
+    desc: "Sương sớm vùng núi rừng càng làm cho cái rét mướt đầu đông thêm se sắt, đã cuối giờ Mão mà đất trời vẫn chưa thoát hẳn cơn ngái ngủ...",
+    link: "/than-chien-trieu-tran-quyen-1-c1"
   },
   {
     title: "Chương 02: Hai vị khách không mời",
     img: Image2,
-    desc: "Máu đổ xuống vì hòa bình và tự do của dân tộc, để lại trong lòng người sau bao niềm tự hào.",
-    link: "than-chien-trieu-tran-quyen-1-c12"
+    desc: "Trần Nhật Duật ra khỏi trại của người Man một đoạn thì thấy trước mặt xuất hiện rừng người ngựa, cờ xí rợp trời...",
+    link: "than-chien-trieu-tran-quyen-1-c2"
   },
   {
     title: "Chương 03: Ma Thị Cao Sơn",
     img: Image3,
-    desc: "Họ là những biểu tượng của lòng yêu nước, sự quả cảm và mưu lược.",
-    link: "/than-chien-trieu-tran-quyen-1-c20"
+    desc: "Để đến được bản Man, đoàn người phải trèo đèo, lội suối, tiến sâu vào trong vùng núi rừng trùng điệp nhất ở bên bờ Đông dòng sông Đà...",
+    link: "/than-chien-trieu-tran-quyen-1-c3"
   },
   {
     title: "Chương 04: Bản lạ",
     img: Image4,
-    desc: "Với lòng trung thành và sức mạnh phi thường, họ đã viết nên những trang sử hào hùng, lưu danh muôn đời.",
-    link: "/than-chien-trieu-tran-quyen-1-c23"
-  }
+    desc: "Nhà sàn của quan tạo trong bản Man này cũng giống như mọi căn nhà sàn bình thường khác của người Man...",
+    link: "/than-chien-trieu-tran-quyen-1-4"
+  },
 ]
 
 
