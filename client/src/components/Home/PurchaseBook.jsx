@@ -3,32 +3,13 @@ import { useDispatch } from "react-redux";
 import React, { useEffect, useLayoutEffect } from 'react';
 import AOS from 'aos';
 
-const data = [
-  {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-  },
-  {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-  },
-  {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-  },
-  {
-    title: "Hidden Dreams",
-    img: "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617763137764-D5F6028LYPHLAP5BIK0Q/mines.jpg",
-    desc: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.",
-  }
-]
+// Import hình ảnh từ source code
+import albumsImage from "../../assets/images/ads_buy_book.jpg";
 
 const PurchaseBook = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
+
   useLayoutEffect(() => {
     AOS.init({
       offset: 200,
@@ -37,6 +18,7 @@ const PurchaseBook = () => {
       delay: 100,
     });
   }, []);
+
   return (
     <Box
       data-aos="fade-up"
@@ -83,7 +65,7 @@ const PurchaseBook = () => {
               marginTop: "30px"
             }}
           >
-            <p >
+            <p>
               Pre-Order “Thần Chiến Triều Trần” cũng là một cách để hỗ trợ tài chính cho tác giả, với mong ước thực hiện Dự án này để làm mới phong cách kể truyện về lịch sử, khiến cho các bạn trẻ nói riêng và người dân Việt Nam nói chung, có được món ăn tinh thần hấp dẫn về đề tài vốn bị đánh giá là khô khan. Thông qua đó, khơi gợi lên sự tò mò, thích thú, hứng khởi của giới trẻ đối với lịch sử nước nhà.
             </p>
           </Box>
@@ -98,9 +80,6 @@ const PurchaseBook = () => {
             <Button
               variant="contained"
               size="large"
-              // startIcon={<PlayArrowIcon />}
-              // component={Link}
-              // to={routesGen.mediaDetail(mediaType, item.id)}
               sx={{ width: "max-content" }}
             >
               LIÊN HỆ MUA HÀNG
@@ -119,8 +98,11 @@ const PurchaseBook = () => {
             marginBottom: { xs: "15px", sm: "15px" },
           }}
         >
+          {/* Sử dụng ảnh được import */}
+          
           <img
-            src={"https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1618301847645-ET681WARSCYE555KSEPX/albums.jpg"}
+            src={albumsImage}
+            alt="Albums"
             style={{
               maxWidth: "100%",
               height: "auto",
