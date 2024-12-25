@@ -3,14 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
 import uiConfigs from "../../configs/ui.configs";
 import HomeSlideImg from "../../assets/images/home-slide.jpg";
-
-// Example low-quality base64 image (replace this with your actual LQIP base64 or low-quality URL)
-const lowQualityImage = "data:image/png;base64,....";
+import LogoImg from "../../assets/images/logo.png"; // Import ảnh logo
 
 const media = [
   {
     img: HomeSlideImg,
-    lowResImg: lowQualityImage, // Add a low-quality placeholder
   },
 ];
 
@@ -64,11 +61,35 @@ const HomeSlide = ({ mediaType, mediaCategory }) => {
                 },
                 backgroundPosition: "top",
                 backgroundSize: "cover",
-                backgroundImage: `url(${isLoaded[index] ? item.img : item.lowResImg})`,
-                transition: "filter 0.3s ease",
-                filter: isLoaded[index] ? "none" : "blur(20px)",
+                backgroundImage: `url(${item.img})`,
+                transition: "background-image 0.5s ease",
               }}
             >
+              {/* Placeholder logo */}
+              {!isLoaded[index] && (
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: "25%", // Kích thước logo = 1/4 chiều rộng khung
+                    height: "auto",
+                    zIndex: 3,
+                  }}
+                >
+                  <img
+                    src={LogoImg}
+                    alt="Logo placeholder"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </Box>
+              )}
+
+              {/* Preload ảnh chính */}
               <img
                 src={item.img}
                 alt={`Slide ${index}`}
