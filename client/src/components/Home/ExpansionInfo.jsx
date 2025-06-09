@@ -32,7 +32,7 @@ const data = [
     title: "Chương 04: Bản lạ",
     img: Image4,
     desc: "Nhà sàn của quan tạo trong bản Man này cũng giống như mọi căn nhà sàn bình thường khác của người Man...",
-    link: "/than-chien-trieu-tran-quyen-1-4"
+    link: "/than-chien-trieu-tran-quyen-1-c4"
   },
 ]
 
